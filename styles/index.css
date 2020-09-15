@@ -1,0 +1,55 @@
+:root {
+  @apply .light;
+}
+
+.dark {
+  --color-bg-primary: #1a202c;
+  --color-bg-secondary: #161b25;
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #e2e8f0;
+  --color-bg-accent: #5afb9a;
+  --color-text-accent: #5afb9a;
+  --color-text-inverse: #161b25;
+}
+
+.light {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #edf2f7;
+  --color-bg-accent: #2fc163;
+  --color-text-primary: #161b25;
+  --color-text-secondary: #1a202c;
+  --color-text-inverse: #e2e8f0;
+  --color-text-accent: #2fc163;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+.is-dark {
+  transform: rotate(180);
+  transition: all 1s;
+}
+
+.is-light {
+  transform: rotate(-180deg);
+  transition: all 1s;
+}
+
+a.selected {
+  color: var(--color-text-accent);
+}
+
+.blog-post h1 {
+  color: var(--color-text-primary);
+  font-size: 4rem;
+}
+
+/* #wave path{
+    fill: 
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
