@@ -15,12 +15,17 @@ export const meta = {
 export default function Blog(props) {
   const blogPosts = props.allData.filter((content) => content.type == 'post')
   return (
-    <div className="container mx-auto pt-8">
+    <div className="container mx-auto">
       <h2 className="text-2xl text-accent font-mono font-bold">{meta.title}</h2>
       <p className="text-lg text-primary mb-8">{meta.seoDescription}</p>
-      {blogPosts.map((post, index) => (
-        <PostListingHome key={index} post={post} indes={index} />
-      ))}
+      <div className="flex flex-col gap-3">
+        {blogPosts.map((post, index) => (
+          <>
+            <PostListingHome key={index} post={post} indes={index} />
+            <hr className="border-black border-opacity-25" />
+          </>
+        ))}
+      </div>
     </div>
   )
 }

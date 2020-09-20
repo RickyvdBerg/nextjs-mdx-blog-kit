@@ -19,7 +19,7 @@ config:
     - { text: Home, link: / }
     - { text: Blog, link: /blog }
     - { text: About, link: /about }
-    - { text: Hire, link: /hire }
+    - { text: Contact, link: /contact }
 
   css:
     primaryColor: '#536DFE'

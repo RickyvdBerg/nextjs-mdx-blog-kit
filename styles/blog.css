@@ -1,0 +1,9 @@
+.blog-post {
+  font-family: 'Segoe UI', Roboto, monospace;
+}
+
+.blog-post pre {
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--color-bg-secondary);
+}

@@ -1,20 +1,73 @@
-import { DemoCode } from "../../code-snippets/post-one";
-import BlogMeta from "../../components/BlogMeta";
+import LinkAnchor from '../../components/LinkAnchor'
+import BlogMeta from '../../components/BlogMeta'
+
 export const meta = {
-    title: "This is my first post",
-    tags: ["serverless", "node.js", "python"],
-    layout: "post",
-    publishDate: "2017-10-02",
-    modifiedDate: false,
-    seoDescription:
-        "This post demonstrates syntax-hightlighted code in your post.",
-    exclude: false
-};
+  title: 'This is my first post',
+  tags: ['serverless', 'node.js', 'python'],
+  layout: 'post',
+  publishDate: '2017-10-02',
+  modifiedDate: false,
+  seoDescription:
+    'This post demonstrates syntax-hightlighted code in your post.',
+  exclude: false,
+}
 
 <BlogMeta data={props} />
 
-No need for a title in body. You add the title to the metadata, and it appears here.
-Same for tags and publication date.
-This starter blog is set up for code highlighting like so:
+## banana
 
-<DemoCode />
+No need for a title in body. You add the title to the metadata, and it appears here.
+Same for tags and publication date.  
+This starter blog is set up for code highlighting like so:
+We created a beautiful component
+**banana**  
+  
+
+chocolate
+
+
+
+```jsx
+import React from 'react'
+
+export const meta = {
+  title: 'About',
+  tags: ['Next.js', 'MDX'],
+  layout: 'page',
+  publishDate: '2011-01-01',
+  modifiedDate: false,
+  seoDescription: 'This is an about page.',
+}
+
+function About() {
+  return (
+    <div className="centered-container">
+      <h1>About</h1>
+    </div>
+  )
+}
+
+export default About
+```
+
+<LinkAnchor element="h2" id="chapter-1" text="BaseLayout component" />
+
+This is my baselayout used by a lot of pages
+
+```jsx
+import React from 'react'
+
+export default function BaseLayout({ children }) {
+  return (
+    <div id="base-layout" className="container mx-auto mt-16">
+      {children}
+    </div>
+  )
+}
+```
+
+```python
+df_train_age_mean = np.mean(df_train["Age"])
+df_train['Age'].fillna(df_train_age_mean, inplace=True)
+df_train['Embarked'].fillna('S', inplace=True)
+```

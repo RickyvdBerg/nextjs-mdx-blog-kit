@@ -1,26 +1,40 @@
+@import '../node_modules/tocbot/dist/tocbot.css';
+
 :root {
   @apply .light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 .dark {
-  --color-bg-primary: #1a202c;
-  --color-bg-secondary: #161b25;
-  --color-text-primary: #e2e8f0;
-  --color-text-secondary: #e2e8f0;
+  --color-bg-primary: #161618;
+  --color-bg-secondary: #121213;
   --color-bg-accent: #5afb9a;
+  --color-bg-inverse: #ffffff;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e1e2e2;
+  --color-text-tertiary: #9a9a9c;
   --color-text-accent: #5afb9a;
-  --color-text-inverse: #161b25;
+  --color-text-inverse: #18161b;
+  --color-text-inverse-secondary: #121213;
 }
 
 .light {
   --color-bg-primary: #ffffff;
-  --color-bg-secondary: #edf2f7;
+  --color-bg-secondary: #f0f0f0;
   --color-bg-accent: #2fc163;
+  --color-bg-inverse: #1a202c;
   --color-text-primary: #161b25;
   --color-text-secondary: #1a202c;
-  --color-text-inverse: #e2e8f0;
+  --color-text-inverse: #ffffff;
+  --color-text-inverse-secondary: #f0f0f0;
   --color-text-accent: #2fc163;
 }
+
+@import './blog.css';
+
+@import './code-theme.css';
 
 body {
   background-color: var(--color-bg-primary);
@@ -37,13 +51,15 @@ body {
   transition: all 1s;
 }
 
-a.selected {
-  color: var(--color-text-accent);
+.toc-link:before {
+  content: none !important;
+}
+.is-active-link:before {
+  content: none !important;
 }
 
-.blog-post h1 {
-  color: var(--color-text-primary);
-  font-size: 4rem;
+a.selected {
+  color: var(--color-text-accent);
 }
 
 /* #wave path{

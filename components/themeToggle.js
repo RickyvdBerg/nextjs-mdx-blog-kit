@@ -13,8 +13,22 @@ export const Toggle = () => {
   }
 
   return (
-    <div className={(isDark() ? 'is-dark' : 'is-light') + ' cursor-pointer'}>
-      <VscColorMode onClick={(e) => onToggleClicked(e)}></VscColorMode>
+    <div
+      className={`cursor-pointer text-primary ${!isDark() ? 'is-dark' : ''}`}
+    >
+      <VscColorMode onClick={() => onToggleClicked()}></VscColorMode>
+      <style jsx>
+        {`
+          .is-dark {
+            transform: rotate(-180deg);
+            transition: all 1s;
+          }
+          :not(.is-dark) {
+            transform: rotate(180deg);
+            transition: all 1s;
+          }
+        `}
+      </style>
     </div>
   )
 }

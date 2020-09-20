@@ -1,6 +1,6 @@
 import React from 'react'
 import BaseLayout from '../components/layouts/BaseLayout'
-import PostListing from '../components/PostListing'
+import PostListingHome from '../components/PostListingHome'
 
 export const meta = {
   title: 'Search',
@@ -18,7 +18,7 @@ export default function Search(props) {
     const items = posts
       .filter((post) => post.tags.includes(tagTopic))
       .map((post, index) => (
-        <PostListing key={index} post={post} index={index} />
+        <PostListingHome key={index} post={post} index={index} />
       ))
 
     if (items.length) {

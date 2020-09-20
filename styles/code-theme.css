@@ -1,0 +1,252 @@
+.dark {
+  --color-code-text: #eeeeee;
+  --color-code-comment: #4d4d4d;
+  --color-code-punctuation: #edf2f7;
+  --color-code-const: #a28ce0;
+  --color-code-bool: #8963f0;
+  --color-code-string: #5afb9a;
+  --color-code-var: #f8f8f2;
+  --color-code-func: #48b8e4;
+  --color-code-keyword: #b47fd8;
+  --color-code-regex: #ffb86c;
+  --color-code-property-access: #e66969;
+  --color-code-operator: #2490e9;
+  --color-code-arrow: #a64ecf;
+  --color-code-class-name: #ebaa32;
+}
+
+.light {
+  --color-code-text: #2d3748;
+  --color-code-comment: #718096;
+  --color-code-punctuation: #1a1a1a;
+  --color-code-const: #7c4dff;
+  --color-code-bool: #7c4dff;
+  --color-code-string: #2fc163;
+  --color-code-var: #e53935;
+  --color-code-func: #3d5afe;
+  --color-code-keyword: #5d35ca;
+  --color-code-regex: #6182b8;
+  --color-code-property-access: #e66969;
+  --color-code-operator: #a64ecf;
+  --color-code-arrow: #a64ecf;
+  --color-code-class-name: #ca9d20;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  color: var(--color-code-text);
+  background: var(--color-bg-secondary);
+  font-family: Roboto Mono, monospace;
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+code[class*='language-']::-moz-selection,
+pre[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection,
+pre[class*='language-'] ::-moz-selection {
+  background: #5afb9a75;
+}
+
+code[class*='language-']::selection,
+pre[class*='language-']::selection,
+code[class*='language-'] ::selection,
+pre[class*='language-'] ::selection {
+  background: #5afb9a75;
+}
+
+:not(pre) > code[class*='language-'] {
+  white-space: normal;
+  border-radius: 0.2em;
+  padding: 0.1em;
+}
+
+pre[class*='language-'] {
+  overflow: auto;
+  position: relative;
+  margin: 0.5em 0;
+  padding: 1.25em 1em;
+}
+
+.language-css > code,
+.language-sass > code,
+.language-scss > code {
+  color: #fd9170;
+}
+
+[class*='language-'] .namespace {
+  opacity: 0.7;
+}
+
+.token.property-access {
+  color: var(--color-code-property-access);
+}
+
+.token.atrule {
+  color: #c792ea;
+}
+
+.token.attr-name {
+  color: var(--color-code-class-name);
+}
+
+.token.attr-value {
+  color: var(--color-code-string);
+}
+
+.token.attribute {
+  color: #a5e844;
+}
+
+.token.boolean {
+  color: #c792ea;
+}
+
+.token.builtin {
+  color: #ffcb6b;
+}
+
+.token.cdata {
+  color: #80cbc4;
+}
+
+.token.char {
+  color: #80cbc4;
+}
+
+.token.class {
+  color: #ffcb6b;
+}
+
+.token.class-name {
+  color: var(--color-code-class-name);
+}
+
+.token.comment {
+  color: var(--color-code-comment);
+  font-style: italic;
+}
+
+.token.constant {
+  color: #c792ea;
+}
+
+.token.deleted {
+  color: #ff6666;
+}
+
+.token.doctype {
+  color: #616161;
+}
+
+.token.entity {
+  color: #ff6666;
+}
+
+.token.function {
+  color: var(--color-code-func);
+}
+
+.token.hexcode {
+  color: #f2ff00;
+}
+
+.token.id {
+  color: #c792ea;
+  font-weight: bold;
+}
+
+.token.important {
+  color: #c792ea;
+  font-weight: bold;
+}
+
+.token.inserted {
+  color: #80cbc4;
+}
+
+.token.keyword {
+  color: var(--color-code-keyword);
+}
+
+.token.number {
+  color: #fd9170;
+}
+
+.token.operator {
+  color: var(--color-code-operator);
+}
+
+.token.prolog {
+  color: #616161;
+}
+
+.token.property {
+  color: #80cbc4;
+}
+
+.token.pseudo-class {
+  color: #a5e844;
+}
+
+.token.pseudo-element {
+  color: #a5e844;
+}
+
+.token.punctuation {
+  color: var(--color-code-punctuation);
+}
+
+.token.regex {
+  color: #f2ff00;
+}
+
+.token.selector {
+  color: #ff6666;
+}
+
+.token.string {
+  color: var(--color-code-string);
+}
+
+.token.symbol {
+  color: #c792ea;
+}
+
+.token.tag {
+  color: #ff6666;
+}
+
+.token.unit {
+  color: #fd9170;
+}
+
+.token.url {
+  color: #ff6666;
+}
+
+.token.variable {
+  color: #ff6666;
+}
+
+.token.arrow {
+  color: var(--color-code-arrow);
+}
+
+.token.attr-equals {
+  color: var(--color-code-punctuation);
+}

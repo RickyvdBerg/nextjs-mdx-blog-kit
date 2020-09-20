@@ -15,7 +15,7 @@ import { ThemeProvider } from '../themeContext'
 export default class MyApp extends App {
   constructor(props) {
     super(props)
-    this.state = { navOpen: false, postData: props.postData }
+    this.state = { postData: props.postData }
   }
 
   static async getInitialProps({ Component, router, ctx }) {
@@ -48,31 +48,24 @@ export default class MyApp extends App {
     }
   }
 
-  handleToggleNavigation = () => {
-    this.setState({
-      navOpen: !this.state.navOpen,
-    })
-  }
-
   render() {
     const { postData } = this.state
 
     const seoData = createSEOConfig(postData)
     if (postData) {
       const tagsString = postData.tags.join(', ')
-      console.log(postData)
       return (
-        <div>
+        <>
           <div
             className="absolute object-fill w-4/6 min-h-full h-32 max-h-32 text-secondary"
-            style={{ 'z-index': '-1' }}
+            style={{ zIndex: '-1' }}
           >
             <svg
               version="1.1"
               id="Layer_1"
               viewBox="0 0 1145.85 137.86"
               preserveAspectRatio="none"
-              className="w-full min-h-32 h-32 text-inverse fill-current"
+              className="w-full min-h-32 h-32 text-inverse-secondary fill-current"
             >
               <path
                 d="M0,137.9c0,0,128.4-33.8,273.9-36.1c129.8-0.8,203.5,7.8,299,21.4c95.5,13.8,191,12,286.5-8.1
@@ -88,16 +81,20 @@ export default class MyApp extends App {
 
           {/* (1) SEO  */}
           <Head>
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
             <meta name="keywords" content={tagsString} />
           </Head>
           <NextSeo config={seoData} />
 
           <ThemeProvider>
+            <Navigation />
             {/* (2) navigation */}
-            <div className="z-10 container m-auto px-5 sm:px-8 md:px-20 max-w-screen-xl">
-              <Navigation />
+            <div className="z-10 container pt-20 m-auto px-10 sm:px-8 md:px-20 max-w-screen-xl">
               <div className="flex flex-col justify-between h-full">
-                <div className="px-5 max-w-screen-xl">
+                <div className="">
                   <React.Fragment>
                     {renderLayout(this.props, this.state)}
                   </React.Fragment>
@@ -108,7 +105,7 @@ export default class MyApp extends App {
               </div>
             </div>
           </ThemeProvider>
-        </div>
+        </>
       )
     } else {
       return null
